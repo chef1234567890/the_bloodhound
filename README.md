@@ -51,7 +51,7 @@ the_bloodhound
 └─ Twitter
 ```
 
-### Infra
+### Hosting
 - google app engine
 
 ## Kick Start

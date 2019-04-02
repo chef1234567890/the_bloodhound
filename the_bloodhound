@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+import os
+
+from lib.python.discord.bot import Bot
+
+
+def main():
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
+    Bot.run()
+
+
+if __name__ == '__main__':
+    main()
