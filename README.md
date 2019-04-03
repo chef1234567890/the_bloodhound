@@ -26,6 +26,30 @@ It is only YouTube and Twitch of streaming sites to be monitored.
 - First, cron periodically crawls Youtube API and Twitch API.
 - Start discord bot and notify if there is a difference (start / end) in live status.
 
+### tree
+```
+.
+├── README.md
+├── bin
+│   └── the_bloodhound
+├── config
+│   ├── secrets.yml
+│   └── streamers.yml
+├── lib
+│   └── python
+│       ├── discord
+│       │   └── bot.py
+│       ├── stream_crawler
+│       │   ├── modules
+│       │   │   ├── twitch.py
+│       │   │   └── youtube.py
+│       │   └── stream_crawler.py
+│       ├── the_bloodhound
+│       │   └── diff.py
+│       └── the_bloodhound_cli.py
+└── requirements.txt
+```
+
 ## env
 ### lang
 ```
@@ -50,30 +74,6 @@ the_bloodhound$ pyenv version
     - tbd
 - command line tool
     - click
-
-### tree
-```
-.
-├── README.md
-├── bin
-│   └── the_bloodhound
-├── config
-│   ├── secrets.yml
-│   └── streamers.yml
-├── lib
-│   └── python
-│       ├── discord
-│       │   └── bot.py
-│       ├── stream_crawler
-│       │   ├── modules
-│       │   │   ├── twitch.py
-│       │   │   └── youtube.py
-│       │   └── stream_crawler.py
-│       ├── the_bloodhound
-│       │   └── diff.py
-│       └── the_bloodhound_cli.py
-└── requirements.txt
-```
 
 ### Hosting
 - google app engine
