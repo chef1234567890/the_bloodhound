@@ -1,18 +1,25 @@
-#!/usr/bin/env python
-
 import discord
 import yaml
 
+# class DiscordBot:
+discord_client = discord.Client()
+secrets = yaml.load(open('./config/secrets.yml'), Loader=yaml.FullLoader)
+token = secrets['discord']['token']
+channel_name = '仮設住宅'
 
-class Bot:
-    secrets = yaml.load(open('./config/secrets.yml'), Loader=yaml.FullLoader)
-    print(secrets)
-    token = secrets['discord']['token']
-    channel_id =　secrets['discord']['channel_id']
-    discord_client = discord.Client()
+def get_channel(channel_name):
+    for channel in discord_client.get_all_channels():
+        if channel.name == channel_name:
+            return channel
 
-    @discord_client.event
-    async def on_ready():
-        print('Bloodhound is ready.')
+def get_message():
+    return 'All father gave me sight!'
 
-    discord_client.run(token='a')
+@discord_client.event
+async def on_ready():
+    message = get_message()
+    channel = get_channel(channel_name)
+    await channel.send(message)
+
+def run():
+    discord_client.run(token)
