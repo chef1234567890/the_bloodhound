@@ -48,16 +48,31 @@ the_bloodhound$ pyenv version
     - tbd
 - twitter client
     - tbd
+- command line tool
+    - click
 
-### Class design
+### tree
 ```
-the_bloodhound
-├─ HttpClient
-├─ Discord
-├─ Stream
-|  ├─ Youtube
-|  └─ Twitch
-└─ Twitter
+.
+├── README.md
+├── bin
+│   └── the_bloodhound
+├── config
+│   ├── secrets.yml
+│   └── streamers.yml
+├── lib
+│   └── python
+│       ├── discord
+│       │   └── bot.py
+│       ├── stream_crawler
+│       │   ├── modules
+│       │   │   ├── twitch.py
+│       │   │   └── youtube.py
+│       │   └── stream_crawler.py
+│       ├── the_bloodhound
+│       │   └── diff.py
+│       └── the_bloodhound_cli.py
+└── requirements.txt
 ```
 
 ### Hosting
