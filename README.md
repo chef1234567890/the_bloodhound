@@ -19,8 +19,12 @@ It is only YouTube and Twitch of streaming sites to be monitored.
 +-------------+       |-------------|         |-------------|      +-------------+
 | Twitch API  | <---  | twitch cli  |         | twitter cli | ---> | Twitter API |
 +-------------+       +-------------------------------------+      +-------------+
-
 ```
+### description
+- Discord bot is not usually running.
+    - In order to post actively while running, the bot's activation thread needs to loop endlessly.
+- First, cron periodically crawls Youtube API and Twitch API.
+- Start discord bot and notify if there is a difference (start / end) in live status.
 
 ## env
 ### lang
