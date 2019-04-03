@@ -1,12 +1,11 @@
 #!/usr/bin/env python
 import os
 
-from lib.python.discord.bot import Bot
-
+from lib.python.the_bloodhound_cli import BloodhoundCLI
 
 def main():
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
-    Bot.run()
+    BloodhoundCLI.bloodhound_cli()
 
 
 if __name__ == '__main__':

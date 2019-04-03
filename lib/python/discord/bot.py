@@ -1,6 +1,7 @@
 import discord
 import yaml
 
+# ToDo: クラス化
 # class DiscordBot:
 discord_client = discord.Client()
 secrets = yaml.load(open('./config/secrets.yml'), Loader=yaml.FullLoader)
