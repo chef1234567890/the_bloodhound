@@ -54,9 +54,9 @@ It is only YouTube and Twitch of streaming sites to be monitored.
 ### lang
 ```
 the_bloodhound$ pyenv version
-3.6.8 (set by /Users/bloodhound/.pyenv/version)
+3.7.0 (set by /Users/bloodhound/.pyenv/version)
 ```
-- Why not use python 3.7
+- Use discrod.py with python 3.7.x
     - Discord.py(0.16.12) does not support python 3.7.x.
     - In order to use python 3.7.x, need to use discord.py(1.0.0a0) version under development.
     - Ref: https://github.com/Rapptz/discord.py/issues/1249
