@@ -3,3 +3,5 @@
 # discord.py==discord.py==1.0.0a1792+gdea3ba5
 PyYAML==5.1
 Click==7.0
+google-api-python-client==1.7.8
+pandas==0.24.2
