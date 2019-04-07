@@ -8,11 +8,11 @@ class Diff:
         increment_cache = './tmp/increment.cache'
         decrement_cache = './tmp/decrement.cache'
 
-        previous = csv.reader(open(previous_cache))
-        recent = csv.reader(open(recent_cache))
+        previous = list(csv.reader(open(previous_cache)))
+        recent = list(csv.reader(open(recent_cache)))
 
-        incremental = list(set(previous) - set(recent))
-        decremental = list(set(recent) - set(previous))
+        incremental = list(set(recent[0]) - set(previous[0]))
+        decremental = list(set(previous[0]) - set(recent[0]))
 
         increment = csv.writer(open(increment_cache, 'w'))
         increment.writerow(incremental)

@@ -6,7 +6,7 @@ from lib.python.stream_crawler.modules.youtube import Youtube
 from lib.python.stream_crawler.modules.twitch import Twitch
 #from lib.python.discord.bot import DiscordBot
 from lib.python.discord import bot
-from lib.python.common.common import Common
+from lib.python.common.common import Diff
 
 
 class StreamCrawler:
@@ -21,6 +21,5 @@ class StreamCrawler:
             with open('./tmp/recent.cache', 'w') as f:
                 recent_cache = csv.writer(f, lineterminator='\n')
                 recent_cache.writerow(videos_on_live)
-            diff = Common.diff()
-            if diff:
-                bot.run()
+            Diff.diff()
+            bot.run()
