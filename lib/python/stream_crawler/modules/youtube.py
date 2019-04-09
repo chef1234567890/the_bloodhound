@@ -14,6 +14,7 @@ class Youtube:
             videos = self.youtube_client.search().list(
                 part='snippet',
                 channelId=channel_id,
+                maxResults=5,
                 order='date'
             ).execute()
 
